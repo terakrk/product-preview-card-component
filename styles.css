@@ -1,0 +1,112 @@
+:root {
+    --bg-color: hsl(30, 38%, 92%);
+    --button-sale-price: hsl(158, 36%, 37%);
+    --title: hsl(212, 21%, 14%);
+    --text: hsl(228, 12%, 48%);
+}
+
+
+html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    max-width: 44rem;
+}
+
+.image, img {
+    max-width: 22rem;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    flex: 1;
+    height: 100%;
+}
+
+.card {
+    background-color: white;
+    max-width: 22rem;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    flex: 1;
+    align-self: stretch;
+    margin-bottom: .4rem;
+}
+
+h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    color: var(--title);
+}
+
+p, .old-price {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: var(--text);
+    display: absolute;
+}
+
+.ribbon-text {
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+}
+
+.sale-price {
+    color: var(--button-sale-price);
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 2rem;
+    display: relative;
+}
+
+button {
+    margin: 3rem; auto;
+    display: block;
+    background-color: var(--button-sale-price);
+    color: white;
+    min-width: 10rem;
+    border-radius: 10px;
+}
+
+button:active {
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+
+    .content-wrapper {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .image, img {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+
+    .card {
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        max-width: 22rem;
+    }
+}
+
+.attribution { font-size: 1rem; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
