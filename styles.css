@@ -79,9 +79,18 @@ p, .old-price {
     position: relative;
 }
 
+.sr-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
 
 button {
-    margin: 3rem; auto;
+    margin: 3rem auto;
     display: block;
     background-color: var(--button-sale-price);
     color: white;
